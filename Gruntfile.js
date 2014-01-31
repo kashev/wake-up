@@ -11,42 +11,52 @@
 
 /* GRUNT CONFIGURATION */
 module.exports = function(grunt) {
+  
+  var css_files = {'deploy/css/main.css' : 'src/css/main.scss'};
   grunt.initConfig({
     // JS Hint Options
     jshint: {                                  // task
       src: ['Gruntfile.js', 'src/js/**/*.js'],
       options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          require: true,
-          define: true,
-          requirejs: true,
-          describe: true,
-          expect: true,
-          it: true,
-          module : true
+        curly : true,
+        eqeqeq : true,
+        immed : true,
+        latedef : true,
+        newcap : true,
+        noarg : true,
+        sub : true,
+        undef : true,
+        boss : true,
+        eqnull : true,
+        browser : true,
+        globals : {
+          require : true,
+          define : true,
+          requirejs : true,
+          describe : true,
+          expect : true,
+          it : true,
+          module  : true
         }
       }
     },
     // Sass options
     sass: {                              // Task
-      dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded'
+      dev : {                            // Target
+        options : {                      // Target options
+          style : 'expanded',
+          trace : true,
+          unixNewlines : true
         },
-        files: {                         // Dictionary of files
-          'src/css/main.css': 'src/css/main.scss'        // 'destination': 'source'
-        }
+        files : css_files
+      },
+      dist : {
+        options : {
+          style : 'compressed',
+          trace : true,
+          unixNewlines : true
+        },
+        files : css_files
       }
     }
   });
@@ -57,7 +67,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'sass']);
-
+  grunt.registerTask('default', ['jshint', 'sass:dev']);
+  grunt.registerTask('dist',    ['jshint', 'sass:dist']);
 
 };
