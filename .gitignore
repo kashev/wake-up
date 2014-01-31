@@ -1,0 +1,5 @@
+# .gitignore
+
+.sass-cache/*
+deploy/*
+node_modules/*
