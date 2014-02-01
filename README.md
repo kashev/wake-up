@@ -12,4 +12,4 @@ wake-up
 #### README.md
 
 # Instructions
-Assuming you have `node.js` and `npm` installied, type `npm install` to install all dependencies. Build by typing `grunt`. This will compile `sass` files, `jshint` lint all Javascript files, and move deployable code to `deploy/`.
+Assuming you have `node.js` and `npm` installied, type `npm install` to install all dependencies. Build by typing `grunt` for the development version or `grunt dist` for a minified version. This will compile `sass` files, `jshint` lint all Javascript files, and move deployable code to `dist/`.
