@@ -11,8 +11,18 @@
 
 /* GRUNT CONFIGURATION */
 module.exports = function(grunt) {
-  
-  var css_files = {'deploy/css/main.css' : 'src/css/main.scss'};
+  var html_files = {'dist/index.html' : 'src/index.html'};
+  var css_files  = {'dist/css/main.css' : 'src/css/main.scss'};
+  var js_files   = {'dist/js/main.js' : 'src/js/main.js'};
+
+  var bespoke_copy = {
+    expand : true,
+    flatten : true,
+    cwd: 'node_modules',
+    src: ['bespoke*/**/*.min.js'],
+    dest: 'dist/lib/'
+  };
+
   grunt.initConfig({
     // JS Hint Options
     jshint: {                                  // task
@@ -58,16 +68,77 @@ module.exports = function(grunt) {
         },
         files : css_files
       }
+    },
+    // copy options
+    copy : {
+      dev : {
+        files: [
+          html_files,
+          css_files,
+          js_files,
+          bespoke_copy,
+        ]
+      },
+      dist : {
+        files: [
+          bespoke_copy
+        ]
+      }
+    },
+    // htmlmin - for dist
+    htmlmin : {
+      dist : {
+        options : {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files : html_files
+      }
+    },
+    // uglify - for dist
+    uglify : {
+      dist : {
+        files : js_files,
+        options : {
+          mangle : false,
+
+        }
+      }
     }
   });
-  /* Load Tasks */
-  // Load JSHint task
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  // Load Sass Compilation task
-  grunt.loadNpmTasks('grunt-contrib-sass');
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'sass:dev']);
-  grunt.registerTask('dist',    ['jshint', 'sass:dist']);
+  /* Load Tasks */
+  // Load JSHint Task
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // Load Sass Compilation Task
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  // Load Copy Tasks
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  
+  /* DIST ONLY TASKS */
+  // Load HTML Minification Task
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  // Load JS Minification Task
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+
+  // Default task is dev. dist builds deploy folder.
+  grunt.registerTask('default',
+    [
+      'jshint',
+      'sass:dev',
+      'copy:dev'
+    ]
+  );
+  
+  grunt.registerTask('dist',
+    [
+      'jshint',
+      'sass:dist',
+      'htmlmin',
+      'uglify',
+      'copy:dist'
+    ]
+  );
 
 };
