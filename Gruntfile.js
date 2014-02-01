@@ -74,7 +74,6 @@ module.exports = function(grunt) {
       dev : {
         files: [
           html_files,
-          css_files,
           js_files,
           bespoke_copy,
         ]
