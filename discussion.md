@@ -46,3 +46,59 @@ Agile has become prevalent in the web software development world, and is trickli
 ---
 
 5. What role do the tasks you will engage with in this project have in the design process? Does the design process differ for both interactive design and non-interactive design? If so, how and why?
+
+
+
+-----
+# PROJECT
+
+1. Your personal interpretation of the assertion made by Bolter and Gromala
+
+When I open a digital application, even if it is subconsciously, I judge its design. Even as someone who is not a designer by trade, the first thing that I do is appraise the design of what I'm looking at. A good first impression is the key difference between me believing that an application can accomplish for me what it sets out do, and closing it and never looking at it again. This is an example of the application being very 'revealed'; the application opens, and makes a strong statement.
+
+Once this statement is over, then good applications take a completely different tact, and hide behind their functionality. Their good design becomes subtle and unnoticed by the user. It is clear to the user how to navigate through the app without the buttons or action elements detracting from the information being displayed. Good digital interaction design does not get in the way of the ultimate purpose.
+
+---
+
+2. A general description of each application, including any relevant technical details
+
+For this project, I picked two Android Alarm Clock applications: Timely and Warmly. I picked Android because despite generally being thought of as an ecosystem rife with applications of a sub-par design quality compared to the iOS ecosystem, Android has 80% market share, so these applications are easily available to a large population of Android users. Finally, everyone needs to wake up in the morning; Alarm clocks are universally experienced. I feel a survey of the design of these two beautiful applications could be appreciated not only by designers, but by anyone who needs to wake up.
+
+Timely is a full featured Clock application that can replace the default clock application that ships with any Android device (and it in fact might soon; it was recently bought by Google). The design is decidedly unlike Google's recent flat design language. It features a multicolor, customizable, animated background with mostly translucent design elements. Interactions like setting an alarm or timer time are predominantly gesture controlled (with traditional push button fall backs). These gestures cause more animations. Furthermore, the alarms are highly customizable; the sounds are changeable, the days that the alarm sounds are customizable, and the app even allows for custom puzzles to be set to reduce the likelihood of turning off the alarm without actually waking up..
+
+Unlike Timely, Warmly is not what would be called a "fully featured" Android clock application. It does not seek to provide stopwatches or timers, and doesn't even allow for multiple alarms to be set at different times. It only seeks to fulfill one purpose: to provide a pleasant wake-up experience. The alarms sounds are derived from real life, rather than the futuristic alarm tones of Timely. The design language is decidedly flat; UI elements are stark rectangles, and placed on a lot of yellow 'whitespace'. Finally, the alarm screen delivers information about the weather, and aims to slowly coax people using the app out of bed pleasantly.
+
+---
+
+3. A description of how each application demonstrates the assertion made by Bolter and Gromala
+
+Timely opens strongly by having a striking appearance that looks almost alien on the Android operating system. The background is animated and bubbly; an iOS7 trojan horse. This all disappears into being a background when an alarm is set. The mechanism for doing this is with a swipe, which is in many ways more natural than traditional soft button touching. Timers are set in a way that recalls twisting a dial, except with a single finger. Switching between functions only requires a swipe across the screen. The usage of the app is easy, intuitive, and while well designed, does not feel over-designed.
+
+Warmly is not nearly as feature filled, and doesn't care to hide this fact. The first thing a user will notice is the bold yellow color, reminiscent of the sun. The user is asked to turn on the app, then the alarm setting screen comes up. Holding the alarm sound buttons starts a preview of the sound. Time setting is intuitive to Android users (the time picker isn't unique like the one in Timely). However, once the time is set, the app knows that its task is done. It displays a dark bedside clock until the alarm goes off, or the screen is tapped, and the app yields control of the screen to the Android operating system, quite literally transitioning from showing itself to hiding itself.
+
+---
+
+4. 2+ example user personas for each application
+
+
+---
+
+5. An appropriate number of user stories representing the core functionality of each application
+
+
+---
+
+6. A use case diagram of each application
+
+
+---
+
+7. A written overview that compares and contrasts the two applications based on your analysis
+
+
+---
+
+
+Questions:
+- How to do handin?
+- What does #7 mean?
