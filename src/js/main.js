@@ -8,3 +8,13 @@
 
   main.js
 */
+
+// Add to remove JSHint Error about Bespoke
+
+/* global bespoke:false */
+var deck = bespoke.from('#presentation', {
+  // Plugins:
+  keys: true,
+  touch: true,
+  bullets: 'li'
+});
