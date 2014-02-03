@@ -100,5 +100,6 @@ Warmly is not nearly as feature filled, and doesn't care to hide this fact. The 
 
 
 Questions:
-- How to do handin?
-- What does #7 mean?
+- How to do handin? - Doesn't matter
+- What does #7 mean? - could be text focused, could not be
+- Grading Target - Chrome - stable on OSX
