@@ -9,10 +9,60 @@
   main.scss
 */
 
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+/* SOLARIZED COLORS */
+@import 'bourbon/bourbon';
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$font-stack:   Helvetica, sans-serif;
+$text-color:   #333;
+$slide_width:  100%;
+$slide_height: 100%;
+
+$slide_transition_length : .6s;
+$slide_transition_ease : ease;
+$slide_transition_rotate_y : 90deg;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  font-family: $font-stack;
+  color: $cyan;
+  left: 0;
+  right: 0;
+  width: $slide_width;
+  height: $slide_height;
+  background-color: $base3;
+}
+/* BESPOKE CLASSES */
+.bespoke-parent {
+  width: $slide_width;
+  height: $slide_height;
+  position: absolute;
+  @include perspective(300px);
+}
+
+.bespoke-slide {
+  text-align: center;
+}
+
+.bespoke-active {
+    opacity : 1;
+}
+
+.bespoke-inactive {
+    opacity: 0;
 }
