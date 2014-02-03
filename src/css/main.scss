@@ -9,9 +9,10 @@
   main.scss
 */
 
-/* SOLARIZED COLORS */
+/* IMPORT BOURBON SASS LIBRARY */
 @import 'bourbon/bourbon';
 
+/* SOLARIZED COLORS */
 $base03:    #002b36;
 $base02:    #073642;
 $base01:    #586e75;
@@ -34,10 +35,6 @@ $text-color:   #333;
 $slide_width:  100%;
 $slide_height: 100%;
 
-$slide_transition_length : .6s;
-$slide_transition_ease : ease;
-$slide_transition_rotate_y : 90deg;
-
 body {
   font-family: $font-stack;
   color: $cyan;
@@ -45,24 +42,36 @@ body {
   right: 0;
   width: $slide_width;
   height: $slide_height;
-  background-color: $base3;
 }
 /* BESPOKE CLASSES */
 .bespoke-parent {
   width: $slide_width;
   height: $slide_height;
   position: absolute;
-  @include perspective(300px);
+  @include perspective(600px);
+  background-color: $base00;
 }
 
 .bespoke-slide {
   text-align: center;
+  @include transform-style(preserve-3d);
+  @include backface-visibility(hidden);
+  @include transition-duration(1.0s);
+  background-color: $base3;
 }
 
 .bespoke-active {
-    opacity : 1;
+  @include transform(rotateY(0deg));
 }
 
 .bespoke-inactive {
-    opacity: 0;
+  @include transform(rotateY(180deg));
+}
+
+.bespoke-before {
+  @include transform(rotateY(-180deg));
+}
+
+.bespoke-after {
+  @include transform(rotateY(180deg));
 }
