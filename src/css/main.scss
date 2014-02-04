@@ -37,31 +37,39 @@ $slide_height: 100%;
 
 body {
   font-family: $font-stack;
-  color: $cyan;
-  left: 0;
-  right: 0;
+  color: $orange;
   width: $slide_width;
   height: $slide_height;
+  position: relative;
 }
 /* BESPOKE CLASSES */
 .bespoke-parent {
   width: $slide_width;
   height: $slide_height;
-  position: absolute;
+  position: relative;
   @include perspective(600px);
   background-color: $base00;
 }
 
 .bespoke-slide {
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: $slide_width;
+  height: $slide_height;
   @include transform-style(preserve-3d);
   @include backface-visibility(hidden);
   @include transition-duration(1.0s);
-  background-color: $base3;
+  background-color: $base00;
 }
 
 .bespoke-active {
   @include transform(rotateY(0deg));
+  height: $slide_height;
+
 }
 
 .bespoke-inactive {
@@ -74,4 +82,13 @@ body {
 
 .bespoke-after {
   @include transform(rotateY(180deg));
+}
+
+.bespoke-scale-parent {
+  perspective: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
