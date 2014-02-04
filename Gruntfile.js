@@ -24,6 +24,14 @@ module.exports = function(grunt) {
   };
 
   grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          base : 'dist',
+          livereload : true,
+        },
+      }
+    },
     // JS Hint Options
     jshint: {                                  // task
       src: ['Gruntfile.js', 'src/js/**/*.js'],
@@ -103,6 +111,23 @@ module.exports = function(grunt) {
 
         }
       }
+    },
+    watch : {
+      options : {
+        livereload : true,
+      },
+      html : {
+        files : ['src/index.html'],
+        tasks : ['copy:dev'],
+      },
+      js : {
+        files : ['src/js/*.js'],
+        tasks : ['jshint', 'copy:dev'],
+      },
+      css : {
+        files : ['src/css/main.scss'],
+        tasks : ['sass:dev'],
+      }
     }
   });
 
@@ -113,7 +138,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   // Load Copy Tasks
   grunt.loadNpmTasks('grunt-contrib-copy');
-  
+  // Load Grunt Connect
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  // Load Grunt Watch
+  grunt.loadNpmTasks('grunt-contrib-watch');
   /* DIST ONLY TASKS */
   // Load HTML Minification Task
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -137,6 +165,16 @@ module.exports = function(grunt) {
       'htmlmin',
       'uglify',
       'copy:dist'
+    ]
+  );
+
+  grunt.registerTask('server',
+    [
+      'jshint',
+      'sass:dev',
+      'copy:dev',
+      'connect',
+      'watch'
     ]
   );
 

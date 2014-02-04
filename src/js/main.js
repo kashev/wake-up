@@ -14,7 +14,8 @@
 /* global bespoke:false */
 var deck = bespoke.from('#presentation', {
   // Plugins:
-  keys: true,
-  touch: true,
-  bullets: 'li'
+  keys:    true,
+  touch:   true,
+  bullets: 'li',
+  scale:   true,
 });
