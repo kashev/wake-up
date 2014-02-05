@@ -21,3 +21,4 @@ This project is possible thanks to the work on the following projects:
 - [jQuery](http://jquery.com/)
 - [Sass](http://sass-lang.com/)
 - [Bourbon](http://bourbon.io/)
+- [D3](http://d3js.org/)
