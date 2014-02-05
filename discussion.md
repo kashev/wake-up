@@ -132,7 +132,7 @@ Becky is a manager at a large company, a mom with 2 kids, a loving wife, and a h
 
 ## 6. A use case diagram of each application
 
-Use case diagram functional mockups are in "use case diagrams.vsdx".
+Use case diagram functional mockups are in `use case diagrams.vsdx`.
 
 
 ## 7. A written overview that compares and contrasts the two applications based on your analysis
