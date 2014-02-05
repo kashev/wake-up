@@ -42,6 +42,12 @@ body {
   height: $slide_height;
   position: relative;
 }
+
+.mono {
+  font-family: "Courier New", monospace;
+}
+
+
 /* BESPOKE CLASSES */
 .bespoke-parent {
   width: $slide_width;

@@ -9,13 +9,22 @@
   main.js
 */
 
-// Add to remove JSHint Error about Bespoke
-
+// Add to remove JSHint Error about $, Bespoke, etc.
+/*global $:false */
 /* global bespoke:false */
-var deck = bespoke.from('#presentation', {
-  // Plugins:
-  keys:    true,
-  touch:   true,
-  bullets: 'li',
-  scale:   true,
+/* global var:false */
+
+/* Anonymous Wrapper */
+(function() {
+
+$( document ).ready(function() {
+  var deck = bespoke.from('#presentation', {
+    // Plugins:
+    keys:    true,
+    touch:   true,
+    bullets: 'li',
+    scale:   true,
+  });
 });
+
+})(); // Immediate Wrapper
