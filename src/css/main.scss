@@ -30,6 +30,9 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
+/* COLOR PALLETTE */
+$almost-black: #111111;
+
 $font-stack:   Helvetica, sans-serif;
 $text-color:   #333;
 $slide_width:  100%;
@@ -37,7 +40,7 @@ $slide_height: 100%;
 
 body {
   font-family: $font-stack;
-  color: $orange;
+  color: $almost-black;
   width: $slide_width;
   height: $slide_height;
   position: relative;
@@ -45,6 +48,10 @@ body {
 
 .mono {
   font-family: "Courier New", monospace;
+}
+
+p {
+  text-align: justify;
 }
 
 
@@ -97,4 +104,18 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+/* BESPOKE BULLETS */
+
+.bespoke-bullet-active {
+  visibility: visible;
+}
+
+.bespoke-bullet-inactive {
+  visibility: hidden;
+}
+
+.bespoke-bullet {
+  // todo
 }

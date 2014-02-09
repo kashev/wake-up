@@ -14,6 +14,14 @@ module.exports = function(grunt) {
   var html_files = {'dist/index.html' : 'src/index.html'};
   var css_files  = {'dist/css/main.css' : 'src/css/main.scss'};
   var js_files   = {'dist/js/main.js' : 'src/js/main.js'};
+  
+  var img_copy =  {
+    flatten : true,
+    expand: true,
+    cwd: 'src/img',
+    src: ['**/*'],
+    dest: 'dist/img/'
+  };
 
   var bespoke_copy = {
     expand : true,
@@ -84,11 +92,13 @@ module.exports = function(grunt) {
           html_files,
           js_files,
           bespoke_copy,
+          img_copy
         ]
       },
       dist : {
         files: [
-          bespoke_copy
+          bespoke_copy,
+          img_copy
         ]
       }
     },
