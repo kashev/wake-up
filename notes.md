@@ -114,7 +114,7 @@ Becky is a manager at a large company, a mom with 2 kids, a loving wife, and a h
     - Users can set puzzles to make sure that they wake up
 - Users want to display the time on their phone
     - Users can display the time on a dedicated screen
-    - Users can configure world clocks
+    - Users can set the screen to night mode.
 - Users want to set timers
     - Users can set timers on a dedicated screen
 - Users want to time things
