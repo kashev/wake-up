@@ -24,6 +24,14 @@ $( document ).ready(function() {
     touch:   true,
     bullets: 'li'
   });
+
+  $('#back').click(function() {
+    deck.prev();
+  });
+
+  $('#forward').click(function() {
+    deck.next();
+  });
 });
 
 })(); /* Anonymous Wrapper */

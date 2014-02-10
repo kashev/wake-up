@@ -53,12 +53,30 @@ h1 {
   font-family: "Courier New", monospace;
 }
 
-/* BUTTONS */
+/* NAV BUTTONS */
 .nav {
   height : 100%;
-  width  : 20px;
+  width  : $slide_lr_border;
   position: fixed;
   top: 0;
+  bottom: 0;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 100%;
+  font-size: 80px;
+  z-index: 1;
+  background-color: $grey;
+  display: table;
+  overflow: hidden;
+}
+
+.nav:hover {
+  background-color: darken($grey, 20%);
+}
+
+.center {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #forward {
@@ -89,6 +107,7 @@ h1 {
   right: $slide_lr_border;
   top: $slide_tb_border;
   bottom: $slide_tb_border;
+  overflow: hidden;
   
   @include transition-duration($change_time);
 }
