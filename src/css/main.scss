@@ -14,76 +14,78 @@
 @import "neat/neat";
 
 /* COLOR PALLETTE */
-$almost-black: #111111;
-$grey: #0c0c0c;
+$almost-black: #111;
+$grey: #BBB;
+$white: #FFF;
 
 $font-stack:   Lato, Helvetica, sans-serif;
-$text-color:   #333;
-$slide_width:  90%;
-$slide_height: 90%;
 
-body {
+/* SLIDE VARIABLES */
+$slide_width     : 90%;
+$slide_height    : 90%;
+$slide_lr_border : (100% - $slide_width ) / 2;
+$slide_tb_border : (100% - $slide_height) / 2;
+$change_time     : 0.7s;
+
+html body {
   font-family: $font-stack;
   color: $almost-black;
-  width: $slide_width;
-  height: $slide_height;
+  overflow: hidden;
   position: relative;
-}
-
-.mono {
-  font-family: "Courier New", monospace;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 p {
   text-align: justify;
 }
 
+.mono {
+  font-family: "Courier New", monospace;
+}
 
 /* BESPOKE CLASSES */
 .bespoke-parent {
-  width: $slide_width;
-  height: $slide_height;
-  position: relative;
-  @include perspective(600px);
+  position: fixed;
+  height: 100%;
+  width: 100%;
   background: $grey;
+  overflow: hidden;
 }
 
 .bespoke-slide {
   text-align: center;
+  background: $white;
+
   position: absolute;
-  @include transform-style(preserve-3d);
-  @include backface-visibility(hidden);
-  @include transition-duration(1.0s);
-  background-color: $almost-black;
-  @include fill-parent;
-  @include outer-container;
+  width: $slide_width;
+  height: $slide_height;
+  left: $slide_lr_border;
+  right: $slide_lr_border;
+  top: $slide_tb_border;
+  bottom: $slide_tb_border;
+  
+  @include transition-duration($change_time);
 }
 
 .bespoke-active {
-  @include transform(rotateY(0deg));
-  height: $slide_height;
-
+  @include transform(translateX(0));
 }
 
 .bespoke-inactive {
-  @include transform(rotateY(180deg));
+  @include transform(translateX(110%));
 }
 
 .bespoke-before {
-  @include transform(rotateY(-180deg));
+  @include transform(translateX(-110%));
+  visibility: hidden;
 }
 
 .bespoke-after {
-  @include transform(rotateY(180deg));
-}
-
-.bespoke-scale-parent {
-  perspective: 600px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  @include transform(translateX(110%));
+  visibility: hidden;
 }
 
 /* BESPOKE BULLETS */
@@ -97,5 +99,5 @@ p {
 }
 
 .bespoke-bullet {
-  // todo
+  text-align: left;
 }
