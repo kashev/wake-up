@@ -9,26 +9,9 @@
   main.scss
 */
 
-/* IMPORT BOURBON SASS LIBRARY */
-@import 'bourbon/bourbon';
-
-/* SOLARIZED COLORS */
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
+/* IMPORT BOURBON, NEAT SASS LIBRARY */
+@import "bourbon/bourbon";
+@import "neat/neat";
 
 /* COLOR PALLETTE */
 $almost-black: #111111;
@@ -61,22 +44,21 @@ p {
   height: $slide_height;
   position: relative;
   @include perspective(600px);
-  background-color: $base00;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .bespoke-slide {
   text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: $slide_width;
-  height: $slide_height;
+  width: $slide_width*0.8;
+  height: $slide_height*0.8;
   @include transform-style(preserve-3d);
   @include backface-visibility(hidden);
   @include transition-duration(1.0s);
-  background-color: $base00;
+  background-color: $almost-black;
 }
 
 .bespoke-active {
