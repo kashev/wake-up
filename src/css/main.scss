@@ -13,6 +13,9 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+/* CSS RESET */
+// @import "reset.css";
+
 /* COLOR PALLETTE */
 $almost-black: #111;
 $grey: #BBB;
@@ -42,8 +45,28 @@ p {
   text-align: justify;
 }
 
+h1 {
+  //TODO
+}
+
 .mono {
   font-family: "Courier New", monospace;
+}
+
+/* BUTTONS */
+.nav {
+  height : 100%;
+  width  : 20px;
+  position: fixed;
+  top: 0;
+}
+
+#forward {
+  right: 0;
+}
+
+#back {
+  left: 0;
 }
 
 /* BESPOKE CLASSES */
