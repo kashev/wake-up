@@ -22,7 +22,8 @@ $( document ).ready(function() {
     // Plugins:
     keys:    true,
     touch:   true,
-    bullets: 'li',
+    bullets: 'li'
   });
+});
 
 })(); /* Anonymous Wrapper */
