@@ -17,9 +17,13 @@
 // @import "reset.css";
 
 /* COLOR PALLETTE */
-$almost-black: #111;
-$grey: #BBB;
-$white: #FFF;
+$almost-black : #111;
+$grey         : #BBB;
+$white        : #FFF;
+
+/* FLAT UI COLORS */
+$pomegranate : #c0392b;
+
 
 $font-stack:   Lato, Helvetica, sans-serif;
 
@@ -30,6 +34,8 @@ $slide_lr_border : (100% - $slide_width ) / 2;
 $slide_tb_border : (100% - $slide_height) / 2;
 $change_time     : 0.7s;
 
+/* STANDARD TAG STYLES */
+
 html body {
   font-family: $font-stack;
   color: $almost-black;
@@ -39,6 +45,8 @@ html body {
   width: 100%;
   margin: 0;
   padding: 0;
+
+  font-size: 62.5% // makes default font size 10px, for easy math
 }
 
 p {
@@ -46,12 +54,75 @@ p {
 }
 
 h1 {
-  //TODO
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 .mono {
   font-family: "Courier New", monospace;
 }
+
+blockquote {
+  display:block;
+  background: lighten($grey, 10%);
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 3.2rem;
+  text-align: justify;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid $pomegranate;
+  border-right: 2px solid $pomegranate;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
 
 /* NAV BUTTONS */
 .nav {
