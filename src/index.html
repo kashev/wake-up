@@ -18,18 +18,22 @@
   
   <!-- Style -->
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 <body>
   <!-- Script -->
   <!-- jQuery -->
-  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!--<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> -->
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <!-- Bespoke -->
   <script src="lib/bespoke.min.js"></script>
   <script src="lib/bespoke-keys.min.js"></script>
   <script src="lib/bespoke-touch.min.js"></script>
   <script src="lib/bespoke-bullets.min.js"></script>
+  <!-- Glide -->
+  <script src="js/jquery.glide.min.js"></script>
   <!-- Wake Up -->
   <script src="js/main.js"></script>
   
@@ -38,16 +42,17 @@
   </div>
 
   <!-- BESPOKE EVERYTHING -->
-  <article id="presentation">
+  <article id="presentation" style="display:none">
     
     <!-- TITLE -->
     <section>
       <h1>Everybody Needs to Wake Up</h1>
 
       <h2>a survey of android alarm clock application design</h2>
-      <br><br>
-      <h3 class="mono">Kashev Dalmia</h3>
-      <h3 class="mono">A Project for ARTD 313 @ UIUC, Sp 2014</h3>
+      <div class="bottom">
+        <h3 class="mono">Kashev Dalmia</h3>
+        <h3 class="mono">A Project for ARTD 313 @ UIUC, Sp 2014</h3>
+      </div>
     </section>
     
     <!-- WINDOWS AND MIRRORS -->
@@ -55,7 +60,7 @@
       <blockquote>
         good [examples of digital interaction design] oscillate between hiding and revealing themselves
       </blockquote>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>Good design shows itself, and makes a strong first impression.</li>
         <li>Then, good design takes a back seat to the functionality of the application.</li>
         <li>The user is never overwhelmed with figuring out how to navigate or accomplish a task.</li>
@@ -67,29 +72,52 @@
     <section>
       <h1>This Project</h1>
 
-      <p>For this project, I chose to compare two relatively popular Android alarm clock applications: <a href="https://play.google.com/store/apps/details?id=ch.bitspin.timely">Timely</a>, and <a href="https://play.google.com/store/apps/details?id=com.chaoscollective.warmly">Warmly</a>. I think alarm clocks are an interesting thing to investigate because of their simplicity and pervasiveness. These apps in particular are on on the platform <a href="http://www.engadget.com/2014/01/29/strategy-analytics-2013-smartphone-share/">with the most market share</a>, so are available to the vast majority of those who use their phones. Combined with the fact that <a href="http://www.prleap.com/pr/208911/">83 percent of people between the ages of 18 and 29 use their mobile phones to wake up in the morning</a>, it's likely that Timely and Warmly could be considered by a variety of people looking to just Wake Up.</p>
-      <img src="img/timely_icon.webp" alt="Timely Icon">
-      <img src="img/warmly_icon.webp" alt="Warmly Icon">
+      <p>For this project, I chose to compare two relatively popular Android alarm clock applications: <a href="https://play.google.com/store/apps/details?id=ch.bitspin.timely">Timely</a>, and <a href="https://play.google.com/store/apps/details?id=com.chaoscollective.warmly">Warmly</a>. I think alarm clocks are an interesting thing to investigate because of their simplicity and pervasiveness. These apps in particular are on on the platform <a href="http://www.engadget.com/2014/01/29/strategy-analytics-2013-smartphone-share/">with the most market share</a>, so are available to the vast majority of those who use their phones. Combined with the fact that <a href="http://www.prleap.com/pr/208911/">83 percent of people between the ages of 18 and 29 use their mobile phones to wake up in the morning</a>, it's likely that Timely and Warmly could be considered by a variety of people looking to just <em>Wake Up</em>.</p>
+      <div class="grid">  
+        <img src="img/timely_icon.webp" alt="Timely Icon" class="half">
+        <img src="img/warmly_icon.webp" alt="Warmly Icon" class="half">
+      </div>
     </section>
     
     <!-- THE TIMELY APPROACH -->
     <section>
       <h1>The Timely Approach</h1>
+      <div class="grid">
+        <div class="third">
+          <div class="slider">
+            <ul class="slides">
+              <li class="slide"><img src="img/timely_icon.webp" alt="Timely Icon"></li>
+              <li class="slide"><img src="img/timely1.png" alt="Timely - Slide an Alarm"></li>
+              <li class="slide"><img src="img/timely2.png" alt="Timely - Set an Alarm"></li>
+              <li class="slide"><img src="img/timely3.png" alt="Timely - Configure an Alarm"></li>
+              <li class="slide"><img src="img/timely4.png" alt="Timely - View the Time"></li>
+              <li class="slide"><img src="img/timely5.png" alt="Timely - Time Something"></li>
+              <li class="slide"><img src="img/timely6.png" alt="Timely - Stopwatch"></li>
+            </ul>
+          </div>
+        </div>
 
-      <img src="img/timely_icon.webp" alt="Timely Icon">
-      <p>You know the stock alarm clock that came with your phone? Timely wants you to never open that again. <a href="http://www.theverge.com/2014/1/4/5273474/google-acquires-bitspin-timely">(Google might too.)</a> The design, however, is decidedly unlike Google's recent flat design language that it has brought to Android. It features a multicolor, customizable, animated background with mostly translucent design elements. One of the key differentiators is the interaction design. Actions like setting an alarm or timer duration are predominantly gesture controlled (with traditional push button fall backs).</p>
+        <div class="two-thirds">
+          <p>You know the stock alarm clock that came with your phone? Timely wants you to never open that again. <a href="http://www.theverge.com/2014/1/4/5273474/google-acquires-bitspin-timely">(Google might too.)</a> The design, however, is decidedly unlike Google's recent flat design language that it has brought to Android. It features a multicolor, customizable, animated background with mostly translucent design elements. One of the key differentiators is the interaction design. Actions like setting an alarm or timer duration are predominantly gesture controlled (with traditional push button fall backs).</p>
 
-      <p>Timely is an everything and the kitchen sink type alarm clock application, like the stock one it aims to replace. It has not only an alarm clock, but also a clock intended to use on a dock, a stopwatch, and a timer. The alarms are highly customizable; the sounds are changeable, the days that the alarm sounds are customizable, and the app even allows for custom puzzles to be set to reduce the likelihood of turning off the alarm without actually waking up.</p>    
+          <p>Timely is an everything and the kitchen sink type alarm clock application, like the stock one it aims to replace. It has not only an alarm clock, but also a clock intended to use on a dock, a stopwatch, and a timer. The alarms are highly customizable; the sounds are changeable, the days that the alarm sounds are customizable, and the app even allows for custom puzzles to be set to reduce the likelihood of turning off the alarm without actually waking up.</p>    
+        </div>
+      </div>
     </section>
 
     <!-- THE WARMLY APPROACH -->
     <section>
       <h1>The Warmly Approach</h1>
+      <div class="grid">
+        <div class="third">
+          <img src="img/warmly_icon.webp" alt="Warmly Icon">
+        </div>
+        <div class="two-thirds">
+          <p>Warmly doesn't want to replace the timer application on your phone. In fact, it wants you to spend as little time with it open as possible. There isn't a stopwatch, a timer, or even multiple alarms. You just tell Warmly what time you'd like to wake up, what days you'd like to wake up, and then what sound you'd like to wake up to. That's all. After that, Warmly shows you a dark clock that disappears with one tap, if anything else on the phone needs to be used.</p>
 
-      <img src="img/warmly_icon.webp" alt="Warmly Icon">
-      <p>Warmly doesn't want to replace the timer application on your phone. In fact, it wants you to spend as little time with it open as possible. There isn't a stopwatch, a timer, or even multiple alarms. You just tell Warmly what time you'd like to wake up, what days you'd like to wake up, and then what sound you'd like to wake up to. That's all. After that, Warmly shows you a dark clock that disappears with one tap, if anything else on the phone needs to be used.</p>
-
-      <p>Unlike Timely's loud, electronic noises, Warmly's alarm sounds are inspired by real life. You can select chirping birds, percolating coffee, frying bacon, or even the sounds of trains next to your cheap New York apartment. When the alarm sounds, the process starts a few minutes before you set the alarm. The alarm sound builds up, giving you the chance to wake up slowly, rather than with a start. Warmly gives you some simple weather information to start your day, then disappears again when dismissed.</p>
+          <p>Unlike Timely's loud, electronic noises, Warmly's alarm sounds are inspired by real life. You can select chirping birds, percolating coffee, frying bacon, or even the sounds of trains next to your cheap New York apartment. When the alarm sounds, the process starts a few minutes before you set the alarm. The alarm sound builds up, giving you the chance to wake up slowly, rather than with a start. Warmly gives you some simple weather information to start your day, then disappears again when dismissed.</p>
+        </div>
+      </div>
     </section>
     
     <!-- TIMELY AND WARMLY AS THEY RELATE TO WINDOWS AND MIRRORS -->
@@ -112,8 +140,7 @@
     <section>
       <h1>Eric</h1>
       <p>Eric is a college freshman who did poorly last semester. The main reason? He had trouble waking up for his 8:00 AM classes. Well, it's his first spring semester, his parents just got him a Nexus 5, and the earliest he's got class is 9:00 AM. He just needs to wake up for it.</p>
-      <ul>
-        <li></li>
+      <ul class="bespoke-bullets-container">
         <li>He is a very heavy sleeper, and will mash on the snooze button if given the opportunity.</li> 
         <li>He might need to time himself. Sometimes his five minute breaks stretch into twenty...</li>
         <li>He has class at different times on different days, and might need to wake up at varying times.</li>
@@ -128,7 +155,7 @@
     <section>
       <h2>Becky</h2>
       <p>Becky is a manager at a large company, a mom with 2 kids, a loving wife, and a homemaker, and just got her first smartphone, a Moto X. She is looking to replace her aging alarm clock with something more high tech. She's going to impress her kids.</p>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>She liked the look of her husband's iPhone, but got an Android phone because it was cheaper.</li>
         <li>She has a lot of things she does during the day, and sometimes has trouble making meetings on time because she's working on something at her desk longer than she should.</li>
         <li>She is an avid baker. And she also subscribes to the <a href="http://pomodorotechnique.com/">Pomodoro Technique</a>. So she might need to set a timer for herself.</li>
@@ -148,7 +175,7 @@
     <!-- TIMELY USER STORIES -->
     <section>
       <h1>Timely User Stories</h1>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li><strong>Epic: </strong>Users want to wake up.
           <li>Users can set alarms.</li>
           <li>Users can set the days of the week that the alarm goes off.</li>
@@ -173,7 +200,7 @@
     <!-- WARMLY USER STORIES-->
     <section>
       <h1>Warmly User Stories</h1>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li><strong>Epic: </strong>Users want to wake up.
           <li>Users can set alarms.</li>
           <li>Users can set the days of the week that the alarm goes off.</li>
@@ -214,14 +241,14 @@
     <section>
       <h1>Eric</h1>
       <h2>Reasons Eric Might Use Timely</h2>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>He is a heavy sleeper. The alarm is loud, which wakes him up, the snooze is configurable to be shorter with every snooze, and there are puzzles to make sure he's functioning and not just going through the motions.</li>
         <li>He needs to time himself. Timely has a timer feature that allows him to make sure he's getting through his morning ablutions quickly.</li>
         <li>He has class at different times on different days. Timely allows him to set separate alarms with separate repeating patterns. He can even select different sounds.</li>
         <li>The interface is intuitive. He grew up in the computer age, so after a quick tutorial, setting alarms is effortless.</li>
       </ul>
       <h2>Reasons Eric Might Use Warmly</h2>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>He doesn't like to be jarred awake. Warmly's natural alarm sounds, which build in volume by design, allow Eric to wake up over the course of 5 minutes or so, rather than all at once.</li>
         <li>He misses home. Warmly's breakfast sounds remind him of his mother's bacon!</li>
         <li>He wants simple. Eric might not want to spend all of his time setting alarms, trying to make sure he can sleep until the absolute last possible minute. He just wants to wake up every day, and Warmly allows him to easily set a single, recurring alarm.</li>
@@ -232,13 +259,13 @@
     <section>
       <h1>Becky</h1>
       <h2>Reasons Becky Might Use Timely</h2>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>It reminds her of her husband's iPhone. Which is very pretty.</li>
         <li>She need to remind herself to do things during the day. Because she can name alarms in Timely, she can use alarms to remind herself to attend her meetings, even when she's not looking at her Outlook calendar. She can even use multiple alarms to remind her when she needs to pick up her daughter from dance class.</li>
         <li>She needs to have a convenient timer for both her baking and her pomodoro time management. Timely has a robust timer that is easy to set one handed.</li>
       </ul>
       <h2>Reasons Becky Might Use Warmly</h2>
-      <ul>
+      <ul class="bespoke-bullets-container">
         <li>She doesn't really know her way around her phone yet. Unlike Timely, Warmly is pretty obvious to navigate, and doesn't require a tutorial.</li>
         <li>She doesn't want to wake her husband sleeping when she wakes up. Warmly's gentle sounds wake her up, but don't affect her husband's slumber.</li>
         <li>She wants a bed time clock to replace her old alarm clock. After she's set her Warmly alarm, the dark clock on the dark screen displayed is perfect for propping up on her nightstand while she charges her phone at night.</li>

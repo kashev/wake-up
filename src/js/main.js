@@ -17,14 +17,29 @@
 (function() {
 
 $( document ).ready(function() {
+  
+  /* INITIALIZE BESPOKE */
+  initBespoke();
+
+  /* INITIALIZE GLIDE */
+  initGlide();
+
+  /* Make everything visible */
+  $('#presentation').fadeIn('slow');
+});
+
+
+/* BESPOKE INITIALIZATION FUNCTION */
+function initBespoke() {
   /* Create Bespoke Deck */
   var deck = bespoke.from('#presentation', {
     // Plugins:
     keys:    true,
     touch:   true,
-    bullets: 'li'
+    bullets: 'ul.bespoke-bullets-container li'
   });
 
+  /* Set Click Handlers on Forward & Back Buttons */
   $('#back').click(function() {
     deck.prev();
   });
@@ -32,6 +47,13 @@ $( document ).ready(function() {
   $('#forward').click(function() {
     deck.next();
   });
-});
+}
+
+/* GLIDE INITIALIZATIONS */
+function initGlide () {
+  $('.slider').glide({
+    keyboard : false,
+  });
+}
 
 })(); /* Anonymous Wrapper */
