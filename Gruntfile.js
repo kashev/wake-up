@@ -12,12 +12,18 @@
 /* GRUNT CONFIGURATION */
 module.exports = function(grunt) {
   var html_files = {'dist/index.html' : 'src/index.html'};
-  var css_files  = {'dist/css/main.css' : 'src/css/main.scss'};
-  var js_files   = {'dist/js/main.js' : 'src/js/main.js'};
+  var css_files  = {
+    'dist/css/main.css' : 'src/css/main.scss'
+    // 'dist/css/reset.css' : 'src/css/reset.css',
+  };
+  var js_files   = {
+    'dist/js/main.js' : 'src/js/main.js',
+    'dist/js/jquery.slides.min.js' : 'src/js/jquery.slides.min.js'
+  };
   
   var img_copy =  {
     flatten : true,
-    expand: true,
+    expand : true,
     cwd: 'src/img',
     src: ['**/*'],
     dest: 'dist/img/'
@@ -42,7 +48,7 @@ module.exports = function(grunt) {
     },
     // JS Hint Options
     jshint: {                                  // task
-      src: ['Gruntfile.js', 'src/js/**/*.js'],
+      src: ['Gruntfile.js', 'src/js/main.js'],
       options: {
         curly : true,
         eqeqeq : true,

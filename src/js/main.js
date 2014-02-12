@@ -21,9 +21,6 @@ $( document ).ready(function() {
   /* INITIALIZE BESPOKE */
   initBespoke();
 
-  /* INITIALIZE GLIDE */
-  initGlide();
-
   /* Make everything visible */
   $('#presentation').fadeIn('slow');
 });
@@ -47,13 +44,7 @@ function initBespoke() {
   $('#forward').click(function() {
     deck.next();
   });
-}
 
-/* GLIDE INITIALIZATIONS */
-function initGlide () {
-  $('.slider').glide({
-    keyboard : false,
-  });
 }
 
 })(); /* Anonymous Wrapper */
