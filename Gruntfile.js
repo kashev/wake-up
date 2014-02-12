@@ -13,8 +13,7 @@
 module.exports = function(grunt) {
   var html_files = {'dist/index.html' : 'src/index.html'};
   var css_files  = {
-    'dist/css/main.css' : 'src/css/main.scss',
-    'dist/css/reset.css' : 'src/css/reset.css'
+    'dist/css/main.css' : 'src/css/main.scss'
   };
   var js_files   = {
     'dist/js/main.js' : 'src/js/main.js',
