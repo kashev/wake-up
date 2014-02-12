@@ -62,10 +62,12 @@ h1 {
 
 h2 {
   font-size: 2.4rem;
+  padding: 1%;
 }
 
 h3 {
   font-size: 1.6rem;
+  padding: 0.5%;
 }
 
 em {
@@ -121,18 +123,20 @@ blockquote em{
   font-style: italic;
 }
 
-li {
+ul {
   font-size: 1.2rem;
   line-height: 2.0rem;
+  list-style-type: disc;
 }
 
-ul.big li {
+ul.big {
   font-size: 1.6rem; 
 }
 
 li ul {
   font-size: 0.9em;
   padding-left : 2.0rem;
+  list-style-type: circle;
 }
 
 /* SPECIAL CLASSES */
@@ -154,6 +158,11 @@ li ul {
 
 .teal {
   color: $teal;
+}
+
+.small {
+  font-size:   1.1rem;
+  line-height: 1.2rem;
 }
 
 /* NAV BUTTONS */
