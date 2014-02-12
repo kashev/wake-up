@@ -33,7 +33,7 @@ function initBespoke() {
     // Plugins:
     keys:    true,
     touch:   true,
-    bullets: 'ul.bespoke-bullets-container li'
+    bullets: 'ul li'
   });
 
   /* Set Click Handlers on Forward & Back Buttons */

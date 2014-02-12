@@ -13,11 +13,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-/* CSS RESET */
-// @import "reset.css";
-
-/* SLIDE */
-
 /* COLOR PALLETTE */
 /* https://kuler.adobe.com/Imagine-color-theme-3389921/ */
 $black  : #282828;
@@ -78,8 +73,8 @@ em {
 }
 
 img {
-  max-width  : 100%;
-  max-height : 100%;
+  max-height : 90%;
+  max-width  : 90%;
 }
 
 a:link    { color: $teal; }  /* unvisited link  */
@@ -127,12 +122,17 @@ blockquote em{
 }
 
 li {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 2.0rem;
 }
 
+ul.big li {
+  font-size: 1.6rem; 
+}
+
 li li {
-  font-size: 1.2rem;
+  font-size: 0.9em;
+  padding-left : 1.0rem;
 }
 
 /* SPECIAL CLASSES */
@@ -150,6 +150,10 @@ li li {
 
 .mono {
   font-family: "Courier New", monospace;
+}
+
+.teal {
+  color: $teal;
 }
 
 /* NAV BUTTONS */
@@ -186,6 +190,7 @@ li li {
 .grid {
   @include outer-container;
   max-width: 90%;
+  max-height: 90%;
   .half {
     @include span-columns(6);
   }
