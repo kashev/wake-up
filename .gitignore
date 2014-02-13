@@ -1,6 +1,8 @@
 # .gitignore
 
 .sass-cache/*
+src/css/bourbon/*
+src/css/neat/*
 dist/*
 node_modules/*
 ~*
