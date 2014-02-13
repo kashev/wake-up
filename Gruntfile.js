@@ -11,13 +11,14 @@
 
 /* GRUNT CONFIGURATION */
 module.exports = function(grunt) {
-  var html_files = {'dist/index.html' : 'src/index.html'};
+  var html_files = {
+    'dist/index.html' : 'src/index.html'
+  };
   var css_files  = {
     'dist/css/main.css' : 'src/css/main.scss'
   };
   var js_files   = {
-    'dist/js/main.js' : 'src/js/main.js',
-    'dist/js/jquery.slides.min.js' : 'src/js/jquery.slides.min.js'
+    'dist/js/main.js' : 'src/js/main.js'
   };
   
   var img_copy =  {
