@@ -14,8 +14,8 @@ wake-up
 ## About
 This project was designed and built for the Spring 2014 semester of Art & Design 313 - Digital Interaction Design @ The University of Illinois at Urbana-Champaign. It is a survey of Android alarm clock design through an agile lens. It is currently live at:
 
-http://kashevdalmia.com/wake-up
-http://kashev.github.io/wake-up
+- http://kashevdalmia.com/wake-up
+- http://kashev.github.io/wake-up
 
 ## Build Instructions
 Building this code from source requires `node`, `npm`, and `ruby`.
